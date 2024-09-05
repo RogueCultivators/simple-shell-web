@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+#terminal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.xterm {
+  flex: 1;
+}
+
+/* 设置滚动条轨道的样式 */
+.xterm .xterm-scrollbar {
+  width: 0 !important; /* 设置滚动条宽度 */
+}
+.xterm-rows{
+  width: 100vw !important;
+  height: 100vh !important;
+}
+.xterm-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+/* 隐藏滚动条滑块 */
+.xterm .xterm-scrollbar .xterm-scrollbar-slider {
+  display: none !important;
+}
+
+/* 如果你想要隐藏滚动条但仍然允许滚动，你可以设置 overflow-y 为 auto */
+.xterm .xterm-viewport {
+  overflow-y: auto !important;
+}

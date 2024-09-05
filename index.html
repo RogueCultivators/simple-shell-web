@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ch">
+<head>
+    <link rel="stylesheet" href="./css/xterm.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script src="./js/xterm.js"></script>
+    <script src="./js/addon-clipboard.min.js"></script>
+    <script src="./js/addon-fit.min.js"></script>
+    <script src="./js/addon-unicode11.min.js"></script>
+    <title>shell</title>
+</head>
+<body>
+<div id="terminal"></div>
+</body>
+<script src="./js/frontend.js"></script>
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+
+<!--<head>-->
+<!--    <title>WebTerminal</title>-->
+<!--    <link rel="stylesheet" href="./xterm.css" />-->
+<!--    <script src="./xterm.js"></script>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--    <div style="width: 736px; height: 408px;">-->
+<!--        &lt;!&ndash; 目前版本的 Xterm 5.1.0 默认串口大小 24x80 &ndash;&gt;-->
+<!--        <div id="terminal"></div>-->
+<!--    </div>-->
+<!--    <script>-->
+<!--        const term = new Terminal();-->
+
+<!--        term.open(document.querySelector('#terminal')); // 挂载-->
+
+<!--        const socket = new WebSocket(`ws://${window.location.host}/command`); // 创建WebSocket连接-->
+
+<!--        term.onData((data) => { // 网页xterm窗口中有输入的数据-->
+<!--            // console.log('term.onData:', data);-->
+<!--            socket.send(data); // 通过WebSocket发送给服务器-->
+<!--        });-->
+
+<!--        socket.onmessage = (event) => { // 收到来自服务器的WebSocket消息-->
+<!--            // console.log('socket.onmessage:', event.data);-->
+<!--            term.write(event.data); // 向xterm对象写入数据-->
+<!--        };-->
+<!--    </script>-->
+<!--</body>-->
+
+<!--</html>-->
